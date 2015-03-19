@@ -21,7 +21,10 @@ import re
 import subprocess
 from tempfile import NamedTemporaryFile
 import os
-import pexpect
+
+if os.name != 'nt':
+    import pexpect
+
 import six
 
 from trove.common import exception

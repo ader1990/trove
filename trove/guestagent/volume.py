@@ -14,7 +14,10 @@
 #    under the License.
 
 import os
-import pexpect
+
+if os.name != 'nt':
+    import pexpect
+
 from tempfile import NamedTemporaryFile
 
 from trove.common import cfg
